@@ -1,7 +1,12 @@
 /* === PAGE BACKGROUND AND TEXT STYLE === */
 body {
-    font-family: 'Trebuchet MS', Arial, sans-serif; /* 💡 Change the font family for the entire page */
-    background-color: #bfbfbf; /* 🎨 You can change the entire page background color here */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, 'Trebuchet MS', Arial, sans-serif;
+    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080);
+    background-size: 200% 200%;
+    color: #0000cc;
+    animation: rainbowShift 8s linear infinite;
+    overflow: hidden;
+    height: 100vh;
 }
 
 /* === PARAGRAPH STYLE === */
@@ -23,12 +28,16 @@ a:-webkit-any-link {
 
 /* === MAIN CONTAINER BOX (THE CARD) === */
 #container {
-    max-width: 400px; /* 💡 Change this to make the card bigger/smaller */
-    background-color: #f2f2f2; /* 🎨 Card background color */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 🎨 Adds a soft shadow */
-    border-radius: 10px; /* 💡 Rounded corners */
-    margin: 15px auto;
-    padding: 25px;
+    max-width: 500px;
+    background: linear-gradient(135deg, #ffb3ff 0%, #b3ffff 100%);
+    border: 8px double #ff00cc;
+    border-radius: 30px;
+    margin: 30px auto;
+    padding: 30px 30px 20px 30px;
+    box-shadow: 0 0 40px 10px #00ffff, 0 0 10px 2px #ff00cc inset;
+    position: relative;
+    z-index: 2;
+    animation: gentleShake 3s ease-in-out infinite;
 }
 
 /* === "HI, MY NAME IS" HEADING === */
@@ -39,10 +48,42 @@ a:-webkit-any-link {
 }
 
 /* === PROFILE PICTURE STYLE === */
+#profile-pic-frame {
+    border: 6px ridge #00ff00;
+    background: #fff8e1 url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWI5eGs5ZHhyOTY4MjF1bnhqdTU4Z3piZjVlb2NmdG85OGt6cGk1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rlwz4m0aHgXH13jyrE/giphy.gif') center/cover no-repeat;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ff00cc;
+    position: relative;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #profile-pic {
-    width: 90%; /* 💡 Resize profile picture here */
-    border-radius: 10px; /* 💡 Rounds the corners of the profile picture */
-    margin-bottom: 15px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px dashed #00f;
+    box-shadow: 0 0 30px #ff0, 0 0 10px #0ff inset;
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    animation: spin 8s linear infinite, profileWobble 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes profileWobble {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(2deg) scale(1.05); }
+    50% { transform: rotate(0deg) scale(1.1); }
+    75% { transform: rotate(-2deg) scale(1.05); }
+    100% { transform: rotate(0deg) scale(1); }
 }
 
 /* === YOUR NAME (BIG TEXT) === */
@@ -86,85 +127,175 @@ a:-webkit-any-link {
 
 /* === BACKGROUND IMAGE STYLE === */
 #background-img {
-    background-image: url("[PUT A URL HERE !!!]");
+    display: none; /* Rainbow background replaces this */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* === 2008 CRAZY WHACKY STYLES === */
+body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, 'Trebuchet MS', Arial, sans-serif;
+    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080);
+    background-size: 200% 200%;
+    color: #0000cc;
+    animation: rainbowShift 8s linear infinite;
+}
+
+@keyframes rainbowShift {
+    0% { background-position: 0% 0%; }
+    12.5% { background-position: 100% 0%; }
+    25% { background-position: 100% 100%; }
+    37.5% { background-position: 0% 100%; }
+    50% { background-position: 0% 0%; }
+    62.5% { background-position: 50% 50%; }
+    75% { background-position: 100% 0%; }
+    87.5% { background-position: 50% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes bgmove {
+    /* No longer needed - replaced by rainbow */
+}
+
+#container {
+    max-width: 500px;
+    background: linear-gradient(135deg, #ffb3ff 0%, #b3ffff 100%);
+    border: 8px double #ff00cc;
+    border-radius: 30px;
+    margin: 30px auto;
+    padding: 30px 30px 20px 30px;
+    box-shadow: 0 0 40px 10px #00ffff, 0 0 10px 2px #ff00cc inset;
+    position: relative;
+    z-index: 2;
+}
+
+#profile-pic-frame {
+    border: 6px ridge #00ff00;
+    background: #fff8e1 url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWI5eGs5ZHhyOTY4MjF1bnhqdTU4Z3piZjVlb2NmdG85OGt6cGk1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rlwz4m0aHgXH13jyrE/giphy.gif') center/cover no-repeat;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ff00cc;
+    position: relative;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px dashed #00f;
+    box-shadow: 0 0 30px #ff0, 0 0 10px #0ff inset;
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.profile-pic-caption {
+    text-align: center;
+    font-size: 14px;
+    color: #ff00cc;
+    font-family: 'Comic Sans MS', cursive;
+    margin-top: 5px;
+    text-shadow: 1px 1px 0 #fff, 2px 2px 2px #ff0;
+}
+
+.glow {
+    color: #fff;
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #00ffff, 0 0 30px #ff0;
+    font-size: 60px;
+    font-family: Impact, Charcoal, fantasy;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: textShake 1s ease-in-out infinite;
+}
+
+.rainbow {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 2s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 3s linear infinite alternate;
+    color: #00f;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(30px); }
+}
+
+.comic {
+    font-family: 'Comic Sans MS', cursive;
+    color: #ff00cc;
+    font-size: 22px;
+    text-shadow: 1px 1px 0 #fff, 2px 2px 2px #0ff;
+}
+
+.inline-gif {
+    height: 32px;
+    vertical-align: middle;
+}
+
+.guestbook {
+    margin-top: 30px;
+    padding: 15px;
+    border: 4px dotted #00f;
+    background: #fffbe7;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ff0;
+    text-align: center;
+}
+.guestbook-input {
+    font-family: 'Comic Sans MS', cursive;
+    padding: 5px;
+    border: 2px solid #ff00cc;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+.guestbook-btn {
+    font-family: 'Comic Sans MS', cursive;
+    background: #ff0;
+    border: 2px solid #00f;
+    border-radius: 8px;
+    padding: 5px 15px;
+    color: #00f;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ff0;
+}
+.guestbook-btn:hover {
+    background: #ff00cc;
+    color: #fff;
+    box-shadow: 0 0 10px #ff0, 0 0 5px #00f;
+}
+.guestbook-entries {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #00f;
+}
+
+.blink {
+    color: #ff00cc;
+    font-size: 18px;
+    font-family: 'Comic Sans MS', cursive;
+    animation: blink 0.7s steps(1, end) infinite;
+    margin-top: 20px;
+    text-align: center;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
 
 /* === Don't Touch! (your website will totally explode) === */
 html, body {
@@ -199,4 +330,119 @@ h1, h2, h3 {
     background-size: cover; /* Makes sure image covers the whole background */
     background-position: center;
     background-color: #acacac; /* Fallback color */
+}
+
+@keyframes colorShift {
+    /* No longer needed - replaced by rainbow background */
+}
+
+@keyframes dvdBounce {
+    /* Removed - no longer needed */
+}
+
+@keyframes containerPulse {
+    0% { 
+        box-shadow: 0 0 40px 10px #00ffff, 0 0 10px 2px #ff00cc inset;
+        border-color: #ff00cc;
+    }
+    50% { 
+        box-shadow: 0 0 80px 20px #ff00cc, 0 0 20px 5px #00ffff inset;
+        border-color: #00ffff;
+    }
+    100% { 
+        box-shadow: 0 0 40px 10px #00ffff, 0 0 10px 2px #ff00cc inset;
+        border-color: #ff00cc;
+    }
+}
+
+@keyframes containerRotate {
+    /* Removed - no longer needed */
+}
+
+@keyframes textShake {
+    0% { transform: translateX(0px) translateY(0px); }
+    10% { transform: translateX(-2px) translateY(-2px); }
+    20% { transform: translateX(2px) translateY(2px); }
+    30% { transform: translateX(-2px) translateY(2px); }
+    40% { transform: translateX(2px) translateY(-2px); }
+    50% { transform: translateX(-2px) translateY(-2px); }
+    60% { transform: translateX(2px) translateY(2px); }
+    70% { transform: translateX(-2px) translateY(2px); }
+    80% { transform: translateX(2px) translateY(-2px); }
+    90% { transform: translateX(-2px) translateY(-2px); }
+    100% { transform: translateX(0px) translateY(0px); }
+}
+
+/* === SIDE SPINNING BOXES === */
+.side-box {
+    position: fixed;
+    width: 50make 0px;
+    height: 500px;
+    background: linear-gradient(45deg, #ff00cc, #00ffff, #ff0, #00ff00);
+    border: 10px solid #fff;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 80px #ff00cc, 0 0 40px #00ffff inset;
+    animation: spin3D 6s linear infinite;
+    z-index: 1;
+}
+
+#left-spinner {
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#right-spinner {
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.spinner-content {
+    font-family: Impact, Charcoal, fantasy;
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 0 0 20px #000, 0 0 40px #ff00cc;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+@keyframes spin3D {
+    0% { 
+        transform: translateY(-50%) rotateX(0deg) rotateY(0deg);
+        filter: hue-rotate(0deg);
+    }
+    25% { 
+        transform: translateY(-50%) rotateX(90deg) rotateY(90deg);
+        filter: hue-rotate(90deg);
+    }
+    50% { 
+        transform: translateY(-50%) rotateX(180deg) rotateY(180deg);
+        filter: hue-rotate(180deg);
+    }
+    75% { 
+        transform: translateY(-50%) rotateX(270deg) rotateY(270deg);
+        filter: hue-rotate(270deg);
+    }
+    100% { 
+        transform: translateY(-50%) rotateX(360deg) rotateY(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes gentleShake {
+    0% { transform: translateX(0px) translateY(0px); }
+    10% { transform: translateX(-1px) translateY(-1px); }
+    20% { transform: translateX(1px) translateY(1px); }
+    30% { transform: translateX(-1px) translateY(1px); }
+    40% { transform: translateX(1px) translateY(-1px); }
+    50% { transform: translateX(-1px) translateY(-1px); }
+    60% { transform: translateX(1px) translateY(1px); }
+    70% { transform: translateX(-1px) translateY(1px); }
+    80% { transform: translateX(1px) translateY(-1px); }
+    90% { transform: translateX(-1px) translateY(-1px); }
+    100% { transform: translateX(0px) translateY(0px); }
 }

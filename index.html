@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[PAGE TITLE]</title>
+    <title>Jack Richards - The Ultimate CS Ninja!</title>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="background-img"></div>
-
+    <div id="left-spinner" class="side-box">
+        <div class="spinner-content">JACK</div>
+    </div>
+    <div id="right-spinner" class="side-box">
+        <div class="spinner-content">WOW</div>
+    </div>
     <div id="container">
-        <h3 id="name-intro">[INTRO TEXT]</h3>
-
-        <img src="[PROFILE_IMAGE_FILENAME]" alt="Profile Picture" id="profile-pic">
-
-        <h1 id="name">[FULL NAME]</h1>
-
-        <h2 id="hometown">[HOMETOWN]</h2>
-
+        <h3 id="name-intro">Yo! Welcome to the <span class="rainbow">CRAZIEST</span> profile on the web!</h3>
+        <div id="profile-pic-frame">
+            <img src="img.jpeg" alt="Profile Picture" id="profile-pic">
+            <div class="profile-pic-caption">Jack in 2008 mode</div>
+        </div>
+        <h1 id="name" class="glow">Jack Richards</h1>
+        <h2 id="hometown">From: <span class="marquee">Silicon Valley, CA</span></h2>
         <h3 id="email">
             Email: 
-            <a href="mailto:[EMAIL_ADDRESS]" id="email-link">[EMAIL_ADDRESS]</a>
+            <a href="mailto:jack.richards@email.com" id="email-link">jack.richards@email.com</a>
         </h3>
-
         <p id="bio">
-            [BIOGRAPHY TEXT: Talk about your background, interests, goals.]
+            <span class="comic">Hey dudes and dudettes! I'm Jack, a totally radical Computer Science engineer who codes faster than a caffeinated squirrel. I love hacking, gaming, and making websites that look like a unicorn exploded on your screen. My goal? To bring back the glory days of the internet, one glitter GIF at a time!</span>
         </p>
-
         <p id="fun-fact">
-            Fun Fact: [FUN FACT TEXT]
+            Fun Fact: I once programmed a robot to do the worm at a LAN party. <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWI5eGs5ZHhyOTY4MjF1bnhqdTU4Z3piZjVlb2NmdG85OGt6cGk1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rlwz4m0aHgXH13jyrE/giphy.gif" alt="Dancing Robot" class="inline-gif">
         </p>
+        <div class="guestbook">
+            <h3>Sign my Guestbook!</h3>
+            <input type="text" placeholder="Your name" class="guestbook-input">
+            <button class="guestbook-btn">Sign!</button>
+            <div class="guestbook-entries">No entries yet. Be the first!</div>
+        </div>
+        <div class="blink">Best viewed in Netscape Navigator 9.0!</div>
     </div>
 </body>
 </html>
